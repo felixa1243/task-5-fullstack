@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ArticleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,18 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'root';
+
+Route::get('/', function (){
+    return view('index');
 });
-Route::get('/api/v1', function () {
-    return 'tes';
-});
-Route::post('/api/v1', function () {
-    return 'tes';
-});
-Route::patch('/api/v1', function () {
-    return 'tes';
-});
-Route::delete('api/v1', function ($id) {
-    return 'tes';
-});
+Route::get('/api/v1', [ArticleController::class, 'index']);
+// Route::get('/api/v1', function () {
+//     return 'tes';
+// });
+// Route::post('/api/v1', function () {
+//     return 'tes';
+// });
+// Route::patch('/api/v1', function () {
+//     return 'tes';
+// });
+// Route::delete('api/v1', function ($id) {
+//     return 'tes';
+// });

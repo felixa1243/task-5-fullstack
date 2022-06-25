@@ -8,6 +8,5 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 class blog extends Model{
-    
-    
+    protected $table='article';
 }

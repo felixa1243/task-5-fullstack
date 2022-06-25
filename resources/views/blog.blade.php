@@ -1,0 +1,2 @@
+{{-- @extends('template')
+@include('navbar') --}}
